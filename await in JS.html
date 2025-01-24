@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Async and Await in JavaScript</title>
+</head>
+
+<body>
+    <h2>Async and Await in JavaScript</h2>
+    <p>This example demonstrates the use of async and await in JavaScript</p>
+    <p id="await_result"></p>
+
+    <script>
+        async function fetchData() {
+            let response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            let data = await response.json();
+            document.getElementById("await_result").innerHTML = JSON.stringify(data);
+        }
+
+        fetchData();
+    </script>
+</body>
+
+</html>
